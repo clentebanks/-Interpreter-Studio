@@ -21,3 +21,17 @@ body {
 footer {
   background-color: #343a40;
 }
+/*sound master*/
+body {
+  background-color: #f8f9fa;
+}
+
+.card {
+  margin-top: 50px;
+}
+
+#volumeRange {
+  width: 100%;
+}
+
+/*end sound master*/

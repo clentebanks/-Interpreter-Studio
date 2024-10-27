@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interpreter Sound Master</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="bg-info text-white text-center py-3">
+        <h1>Interpreter's Studio</h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="index.html">Interpreter's Studio</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#tools">Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#resources">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="features" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Features</h2>
+            <ul>
+                <li>Per-Tab Volume Control: <br>
+                    Adjust the volume of each browser tab independently to create the perfect audio environment.</li>
+                <li>Volume Boost: <br>
+                    Amplify the sound output up to 800% to ensure clear and audible audio, even from quiet sources.</li>
+                <li>Mute/Unmute Tabs: <br>
+                    Instantly mute or unmute tabs to manage distractions and focus on what’s important.</li>
+                <li>Easy-to-Use Interface: <br>
+                    Simple and intuitive interface that integrates seamlessly with your browser for quick access and control.</li>
+            </ul>
+        </div>
+    </section>
+    <section id="how-to-use" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">How to Use</h2>
+            <ol>
+                <li>Install InterpreterSound Master from the Chrome Web Store or Microsoft Edge Add-ons.</li>
+                <li>Click the extension icon in your browser toolbar to open the control panel.</li>
+                <li>Use the volume slider to adjust the sound level of the current tab, or select a different tab from the list to manage its audio.</li>
+                <li>Utilize the boost feature to amplify audio up to 800%, ensuring clear and loud sound output.</li>
+            </ol>
+        </div>
+    </section>
+    <div class="container mt-5">
+        <h1 class="text-center">Interpreter Sound Master</h1>
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="volumeRange">Volume Control</label>
+                    <input type="range" class="form-control-range" id="volumeRange" min="0" max="800" value="100">
+                </div>
+                <button class="btn btn-primary" id="applyVolume">Apply Volume</button>
+                <button class="btn btn-secondary" id="muteTab">Mute/Unmute Tab</button>
+                <div class="form-group mt-3">
+                    <label for="volumePreset">Save Volume Preset</label>
+                    <input type="text" class="form-control" id="presetName" placeholder="Preset Name">
+                    <button class="btn btn-success mt-2" id="savePreset">Save Preset</button>
+                </div>
+               
+                <div class="form-group mt-3">
+                    <label for="presetList">Apply Volume Preset</label>
+                    <select class="form-control" id="presetList">
+                        <option value="default">Default</option>
+                        <option value="voiceBoost">Voice Boost</option>
+                        <option value="bassBoost">Bass Boost</option>
+                        <!-- Dynamically populated list of presets -->
+                    </select>
+                    <button class="btn btn-info mt-2" id="applyPreset">Apply Preset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="py-5 bg-light text-center">
+        <div class="container">
+           
+        </div>
+    </section>
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Interpreter's Studio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
