@@ -5,7 +5,7 @@ body {
 .hero-section {
   background: url('https://raw.githubusercontent.com/clentebanks/-Interpreter-Studio/refs/heads/main/img/hero%20section%20image.webp') no-repeat center center;
   background-size: cover;
-  color: white;
+  color: black;
   padding: 100px 0;
 }
 
