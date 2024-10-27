@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Translation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="bg-info text-white text-center py-3">
+        <h1>Interpreter's Studio</h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="index.html">Interpreter's Studio</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#tools">Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#resources">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="dictionary" class="hero-section bg-light text-center py-5">
+        <div class="container">
+            <h2 class="display-4">Voice Translation</h2>
+            <p class="lead">Translate speech in real-time with our cutting-edge tool.</p>
+        </div>
+    </section>
+    <div class="container mt-5">
+        <!-- Título Principal -->
+        <h2 class="text-center">Translate speech in real-time</h2>
+
+        <!-- Sección de Control de Grabación -->
+        <div class="row mt-4 justify-content-center">
+            <div class="col-md-8 text-center">
+                <button id="startRecording" class="btn btn-primary me-3">Iniciar Grabación</button>
+                <button id="stopRecording" class="btn btn-danger" disabled>Detener Grabación</button>
+            </div>
+        </div>
+
+        <!-- Sección de Entrada de Voz y Traducción -->
+        <div class="row mt-4">
+            <!-- Columna de Entrada de Voz -->
+            <div class="col-md-6">
+                <h4 class="text-center">Voice input</h4>
+                <div id="transcription" class="border p-3 mt-3" style="height: 200px; overflow-y: auto;">
+                    <p class="text-muted">Waiting for translation...</p>
+                </div>
+            </div>
+
+            <!-- Columna de Traducción -->
+            <div class="col-md-6">
+                <h4 class="text-center">Translation into Spanish</h4>
+                <div id="translation" class="border p-3 mt-3" style="height: 200px; overflow-y: auto;">
+                    <p class="text-muted">Esperando traducción...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <section class="py-5 bg-light text-center">
+        <div class="container">
+            
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Interpreter's Studio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
