@@ -203,4 +203,19 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 //end sound master
-
+/**panatalla  de carga o spinner */
+document.getElementById("open-dictionary").addEventListener("click", function(event) {
+    event.preventDefault(); // Evitar la redirección inmediata
+  
+    // Mostrar la pantalla de carga cuando se haga clic en el enlace
+    const loadingScreen = document.getElementById("loading-screen");
+    loadingScreen.style.display = "flex"; // Mostrar la pantalla de carga
+  
+    // Redirigir a la nueva página después de un pequeño retraso
+    setTimeout(function() {
+      window.location.href = "https://interpreter-dictionary-3.onrender.com/popup"; // Redirigir
+    }, 500); // 500 ms de retraso para que la animación se vea
+  });
+  
+  
+  
