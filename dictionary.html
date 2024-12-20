@@ -31,18 +31,15 @@
             </nav>
         </div>
     </header>
- <!-- Pantalla de carga -->
-  <!-- Pantalla de carga -->
-  <div id="loading-screen">
-    <div class="spinner"></div>
-    <p>Cargando...</p>
-  </div>
+ 
 
     <section id="dictionary" class="hero-section bg-light text-center py-5">
         <div class="container">
             <h2 class="display-4" style="background-color: rgba(245, 245, 220, 0.8);">Interpreter's Dictionary</h2>
             <p class="lead" style="background-color: rgba(245, 245, 220, 0.8);">Access a comprehensive dictionary of terms and acronyms.</p>
-            <a href="https://interpreter-dictionary-3.onrender.com/popup" class="btn btn-info btn-lg">Access the Dictionary</a>
+            <!-- Loader -->
+            <div id="loader" class="loader"></div>
+            <a href="https://interpreter-dictionary-3.onrender.com/popup" id="dictionary-link" class="btn btn-info btn-lg">Access the Dictionary</a>
         </div>
     </section>
 
@@ -85,7 +82,8 @@
     <section class="py-5 bg-light text-center">
         <div class="container">
             <h2>Ready to Access the Dictionary?</h2>
-            <a href="https://interpreter-dictionary-3.onrender.com/popup" class="btn btn-info btn-lg">Explore Now</a>
+            <div id="loader1" class="loader"></div>
+            <a href="https://interpreter-dictionary-3.onrender.com/popup" id="dictionary-link1"  class="btn btn-info btn-lg">Explore Now</a>
         </div>
     </section>
 
@@ -98,5 +96,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/scripts.js"></script>
 </body>
 </html>

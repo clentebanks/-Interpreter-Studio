@@ -203,19 +203,32 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 //end sound master
-/**panatalla  de carga o spinner */
-document.getElementById("open-dictionary").addEventListener("click", function(event) {
-    event.preventDefault(); // Evitar la redirección inmediata
-  
-    // Mostrar la pantalla de carga cuando se haga clic en el enlace
-    const loadingScreen = document.getElementById("loading-screen");
-    loadingScreen.style.display = "flex"; // Mostrar la pantalla de carga
-  
-    // Redirigir a la nueva página después de un pequeño retraso
-    setTimeout(function() {
-      window.location.href = "https://interpreter-dictionary-3.onrender.com/popup"; // Redirigir
-    }, 500); // 500 ms de retraso para que la animación se vea
-  });
-  
-  
-  
+/**codigo de loader para diccionario */
+document.getElementById('dictionary-link').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita la acción predeterminada
+
+    // Mostrar el loader
+    const loader = document.getElementById('loader');
+    loader.style.display = 'block';
+
+    // Simula la apertura del enlace (abre en una nueva ventana tras un breve delay)
+    setTimeout(() => {
+        window.location.href = this.href;
+    }, 500); // Cambia el delay según sea necesario
+});
+
+/**loader 2 footer */
+document.getElementById('dictionary-link1').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita la acción predeterminada
+
+    // Mostrar el loader
+    const loader = document.getElementById('loader1');
+    loader.style.display = 'block';
+
+    // Simula la apertura del enlace (abre en una nueva ventana tras un breve delay)
+    setTimeout(() => {
+        window.location.href = this.href;
+    }, 500); // Cambia el delay según sea necesario
+});
+
+/**fin de codigo de loader de diccionario */

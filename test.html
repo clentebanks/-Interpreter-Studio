@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interpreter's Dictionary</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Estilos para el loader */
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            display: none; /* Oculto por defecto */
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <section id="dictionary" class="hero-section bg-light text-center py-5"> 
+        <div class="container">
+            <h2 class="display-4" style="background-color: rgba(245, 245, 220, 0.8);">Interpreter's Dictionary</h2>
+            <p class="lead" style="background-color: rgba(245, 245, 220, 0.8);">Access a comprehensive dictionary of terms and acronyms.</p>
+
+            <!-- Loader -->
+            <div id="loader" class="loader"></div>
+
+            <!-- Enlace con el evento para mostrar el loader -->
+            <a href="https://interpreter-dictionary-3.onrender.com/popup" id="dictionary-link" class="btn btn-info btn-lg">Access the Dictionary</a>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('dictionary-link').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita la acción predeterminada
+
+            // Mostrar el loader
+            const loader = document.getElementById('loader');
+            loader.style.display = 'block';
+
+            // Simula la apertura del enlace (abre en una nueva ventana tras un breve delay)
+            setTimeout(() => {
+                window.location.href = this.href;
+            }, 500); // Cambia el delay según sea necesario
+        });
+    </script>
+</body>
+</html>
