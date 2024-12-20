@@ -37,7 +37,8 @@ body {
 /*end sound master*/
 
 /* Estilos para el loader */
-.loader {
+ /* Estilos para el loader */
+ .loader {
   border: 8px solid #f3f3f3;
   border-top: 8px solid #3498db;
   border-radius: 50%;
@@ -51,5 +52,22 @@ body {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* Texto de carga */
+#loading-text {
+  font-size: 24;
+  color: #000;
+  background-color: rgba(245, 245, 220, 0.8);
+  display: none;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+#loading-text1 {
+  font-size: 24;
+  color: #000;
+  display: none;
+  font-size: 1.2rem;
+  margin-top: 10px;
 }
 /*fin estilos loader*/

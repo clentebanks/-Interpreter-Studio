@@ -22,6 +22,13 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+
+        /* Texto de carga */
+        #loading-text {
+            display: none;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -32,6 +39,7 @@
 
             <!-- Loader -->
             <div id="loader" class="loader"></div>
+            <div id="loading-text">Cargando... <span id="countdown">3</span></div>
 
             <!-- Enlace con el evento para mostrar el loader -->
             <a href="https://interpreter-dictionary-3.onrender.com/popup" id="dictionary-link" class="btn btn-info btn-lg">Access the Dictionary</a>
@@ -42,15 +50,26 @@
         document.getElementById('dictionary-link').addEventListener('click', function(event) {
             event.preventDefault(); // Evita la acción predeterminada
 
-            // Mostrar el loader
+            // Mostrar el loader y el texto
             const loader = document.getElementById('loader');
+            const loadingText = document.getElementById('loading-text');
+            const countdown = document.getElementById('countdown');
             loader.style.display = 'block';
+            loadingText.style.display = 'block';
 
-            // Simula la apertura del enlace (abre en una nueva ventana tras un breve delay)
-            setTimeout(() => {
-                window.location.href = this.href;
-            }, 500); // Cambia el delay según sea necesario
+            // Cuenta regresiva
+            let timeLeft = 3;
+            const interval = setInterval(() => {
+                timeLeft--;
+                countdown.textContent = timeLeft;
+
+                if (timeLeft <= 0) {
+                    clearInterval(interval);
+                    window.location.href = event.target.href; // Abre el enlace
+                }
+            }, 1000);
         });
     </script>
 </body>
 </html>
+

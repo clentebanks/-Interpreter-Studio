@@ -207,28 +207,48 @@ document.addEventListener('DOMContentLoaded', function () {
 document.getElementById('dictionary-link').addEventListener('click', function(event) {
     event.preventDefault(); // Evita la acción predeterminada
 
-    // Mostrar el loader
+    // Mostrar el loader y el texto
     const loader = document.getElementById('loader');
+    const loadingText = document.getElementById('loading-text');
+    const countdown = document.getElementById('countdown');
     loader.style.display = 'block';
+    loadingText.style.display = 'block';
 
-    // Simula la apertura del enlace (abre en una nueva ventana tras un breve delay)
-    setTimeout(() => {
-        window.location.href = this.href;
-    }, 500); // Cambia el delay según sea necesario
+    // Cuenta regresiva
+    let timeLeft = 3;
+    const interval = setInterval(() => {
+        timeLeft--;
+        countdown.textContent = timeLeft;
+
+        if (timeLeft <= 0) {
+            clearInterval(interval);
+            window.location.href = event.target.href; // Abre el enlace
+        }
+    }, 1000);
 });
 
 /**loader 2 footer */
 document.getElementById('dictionary-link1').addEventListener('click', function(event) {
     event.preventDefault(); // Evita la acción predeterminada
 
-    // Mostrar el loader
+    // Mostrar el loader y el texto
     const loader = document.getElementById('loader1');
+    const loadingText = document.getElementById('loading-text1');
+    const countdown = document.getElementById('countdown1');
     loader.style.display = 'block';
+    loadingText.style.display = 'block';
 
-    // Simula la apertura del enlace (abre en una nueva ventana tras un breve delay)
-    setTimeout(() => {
-        window.location.href = this.href;
-    }, 500); // Cambia el delay según sea necesario
+    // Cuenta regresiva
+    let timeLeft = 3;
+    const interval = setInterval(() => {
+        timeLeft--;
+        countdown.textContent = timeLeft;
+
+        if (timeLeft <= 0) {
+            clearInterval(interval);
+            window.location.href = event.target.href; // Abre el enlace
+        }
+    }, 1000);
 });
 
 /**fin de codigo de loader de diccionario */
