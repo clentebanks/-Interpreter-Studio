@@ -6,6 +6,21 @@
     <title>Voice Translation</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body::before {
+    content: "In development - demo";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: rgba(246, 4, 4, 0.3);
+    white-space: nowrap;
+    z-index: 9999;
+    pointer-events: none;
+    user-select: none;
+}
+    </style>
 </head>
 <body>
     <header class="bg-info text-white text-center py-3">
@@ -41,7 +56,17 @@
     <div class="container mt-5">
         <!-- Título Principal -->
         <h2 class="text-center">Translate speech in real-time</h2>
-
+        <div class="container">
+            <h5 class="text-center">You can try our tool, but please note:</h5>
+            <ul>
+                <li>This is a limited version of the tool.</li>
+                <li>Currently, audio input must be in English, and translations are provided only into Spanish.</li>
+                <li>Due to the limitations of our free API, the number of characters per translation is restricted.</li>
+            
+            </ul>
+            <p><b>We appreciate your understanding as we continue to improve and expand our service!</b></p>
+        </div>
+    </section>
         <!-- Sección de Control de Grabación -->
         <div class="row mt-4 justify-content-center">
             <div class="col-md-8 text-center">
