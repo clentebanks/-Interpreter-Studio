@@ -8,19 +8,32 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body::before {
-    content: "In development - Extension demo";
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3rem;
-    color: rgba(246, 4, 4, 0.3);
-    white-space: nowrap;
-    z-index: 9999;
-    pointer-events: none;
-    user-select: none;
-}
-    </style>
+            content: "In development - demo";
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 5vw; /* Font size scales with the viewport width */
+            color: rgba(246, 4, 4, 0.3);
+            white-space: nowrap;
+            z-index: 9999;
+            pointer-events: none;
+            user-select: none;
+        }
+        
+        @media (max-width: 768px) {
+            body::before {
+                font-size: 6vw; /* Adjust font size for smaller screens */
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body::before {
+                font-size: 8vw; /* Further adjustment for very small screens */
+            }
+        }
+        </style>
+        
 </head>
 <body>
     <header class="bg-info text-white text-center py-3">
@@ -83,7 +96,7 @@
         <h1 class="text-center">Interpreter Sound Master</h1>
         <div class="card">
             <div class="card-body">
-                <div class="form-group">
+                <div  class="form-group">
                     <label for="volumeRange">Volume Control</label>
                     <input type="range" class="form-control-range" id="volumeRange" min="0" max="800" value="100">
                 </div>
